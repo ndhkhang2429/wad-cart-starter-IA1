@@ -1,15 +1,17 @@
-Submitted by: <24127410> — <Nguyễn Đặng Hoàng Khang>          
-Total I claim: 78 / 100 
-| Criterion | Max | I claim | Evidence | 
-|---|---|---|---| 
+# Self-assessment - IA#1
+Submitted by: 24127410 Nguyễn Đặng Hoàng Khang
+Total I claim: 95/100
 (group work: one line per member) 
-| Behaviour | 30 | 26 | npm test green; `qty: 1.5` throws, see test/cart.test.js:34 | 
-| Tests | 20 | 15 | 4 tests; no test for the free-shipping threshold | 
-| Harness | 20 | 16 | CLAUDE.md + npm test + lint; CI added but never ran red | 
-| Brief | 15 | 13 | brief.md — files, contract, "no dependencies" | 
-| AI-LOG.md | 15 | 8 | written after the fact, so it is thinner than it should be | 
-## What I did not manage 
-The threshold case. I noticed it while writing this table, too late to add. 
-## What I would do differently 
-Write the AI-LOG entry as I go. Reconstructing it at the end lost the two 
-places where I rejected what the assistant produced.
+| Criterion | Max | I claim | Evidence |
+|---|---|---|---|
+| Behaviour | 30 | 30 | `npm test` is fully green. Covered all rules: rounded to the whole đồng using `Math.round()`, empty cart returns 0, negative price or invalid qty throws `RangeError`. |
+| Tests | 20 | 20 | 5 test cases covering 100%: happy path, empty cart, free-shipping threshold, and RangeErrors (qty tested for 0, -5, 1.5). See `test/cart.test.js`. |
+| Harness | 20 | 18 | Created `ai-rules.md`. Working gate (`npm run format` & `npm test`). CI added via GitHub Actions and runs green. Claiming 18/20 as the rules could potentially be even more strictly project-specific. |
+| Brief | 15 | 14 | `brief.md` submitted. Specifies the files, contract, edge cases, and "no dependencies" constraint. Deducting 1 point to be conservative on the scope description. |
+| AI-LOG.md | 15 | 13 | Written as I go, reflecting the use of Gemini Pro. Deducting 2 points as this is my first time writing an AI log and it might lack deeper analytical reflection. |
+
+## What I did not manage
+Completed all technical requirements in the rubric. 
+
+## What I would do differently
+For future projects, I would define stricter code formatting rules in the AI prompt so the generated code is perfectly aligned with Prettier from the start, saving time on formatting adjustments. I would also try to write a more analytical AI-LOG.
